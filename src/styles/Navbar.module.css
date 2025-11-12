@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.navbarWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  padding-top: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbarContainer {
+  width: 90%;
+  max-width: 1200px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 0 30px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px; /* important for spacing */
+}
+
+.navbarLogo {
+  font-family: 'Pacifico', cursive;
+  font-size: 22px;
+  font-weight: 500;
+  color: #0a0a0a;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* Desktop Menu */
+.desktopMenu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1; /* let the menu take available space */
+}
+
+.navbarMenu {
+  border-bottom: none;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbarMenu .ant-menu {
+  display: flex !important;
+  justify-content: center;
+  flex: 1;
+  background: transparent !important;
+}
+
+.navbarMenu .ant-menu-item {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 10px;
+  color: #1a1a1a;
+}
+
+.navbarMenu .ant-menu-item:hover {
+  color: #1677ff;
+}
+
+.navbarButton {
+  background-color: #0d1f2d;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.navbarButton:hover {
+  background-color: #1677ff;
+}
+
+/* Mobile Menu Icon */
+.mobileMenuIcon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #0a0a0a;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .desktopMenu {
+    display: none;
+  }
+
+  .mobileMenuIcon {
+    display: block;
+  }
+
+  .navbarContainer {
+    padding: 0 20px;
+  }
+
+  .navbarLogo {
+    font-size: 18px;
+  }
+
+  .ant-drawer-body {
+    padding: 20px;
+  }
+
+  .mobileDrawer .ant-menu-item {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}

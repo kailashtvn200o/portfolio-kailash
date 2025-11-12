@@ -1,0 +1,51 @@
+.bannerWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 0;
+}
+
+.bannerContainer {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannerImage {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+/* Add some smooth hover scaling for a modern feel */
+.bannerImage:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bannerWrapper {
+    padding: 20px 0;
+  }
+
+  .bannerContainer {
+    width: 95%;
+  }
+
+  .bannerImage {
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bannerImage {
+    border-radius: 8px;
+  }
+}
